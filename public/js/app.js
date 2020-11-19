@@ -2286,6 +2286,8 @@ __webpack_require__.r(__webpack_exports__);
               'Content-Type': 'multipart/form-data'
             }
           }).then(function () {
+            _this.file = null;
+
             _this.$emit('notificationWasSaved');
           });
         }
@@ -2300,6 +2302,7 @@ __webpack_require__.r(__webpack_exports__);
         Object.assign(this.editingNotification, this.notification);
         this.$modal.show('notificationModal');
       } else {
+        this.file = null;
         this.editingNotification = {
           title: '',
           description: '',

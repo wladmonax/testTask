@@ -129,6 +129,7 @@ export default {
                             }
                         }
                     ).then( () => {
+                        this.file =  null;
                         this.$emit('notificationWasSaved')
                     })
 
@@ -147,6 +148,7 @@ export default {
                 Object.assign(this.editingNotification, this.notification)
                 this.$modal.show('notificationModal')
             } else {
+                this.file =  null;
                 this.editingNotification = {
                     title: '',
                     description: '',
